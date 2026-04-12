@@ -1,0 +1,1 @@
+"""Core assistant functionality and base classes."""
