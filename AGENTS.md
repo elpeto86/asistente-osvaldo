@@ -2,6 +2,27 @@
 
 This file contains documentation for the agents available in this project.
 
+## GitHub Repository Information
+
+**Repository**: https://github.com/elpeto86/asistente-osvaldo.git
+
+**Project**: Asistente Osvaldo - AI Assistant Integration
+
+**Purpose**: This repository contains the integration and configuration files for Osvaldo, an AI assistant powered by Kilo CLI. The project focuses on providing intelligent assistance for software engineering tasks, code analysis, and development workflows.
+
+**Branch**: main (default)
+
+**Usage Clone**:
+```bash
+git clone https://github.com/elpeto86/asistente-osvaldo.git
+```
+
+**Structure**:
+- `.kilo/` - Kilo CLI configuration and agent definitions
+- `AGENTS.md` - Agent documentation (this file)
+- `kilo.json` - Project configuration
+- Additional configuration files for MCP servers, permissions, and plugins
+
 ## Agent Template
 
 Use this template when adding new agents to the project:
