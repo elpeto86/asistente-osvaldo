@@ -40,11 +40,11 @@
 
 ## 6. Dependencies and Tooling
 
-- [ ] 6.1 Create requirements.txt with core dependencies
-- [ ] 6.2 Create requirements-dev.txt with development dependencies
-- [ ] 6.3 Add pyproject.toml with project metadata
-- [ ] 6.4 Create setup.py or setup.cfg for packaging
-- [ ] 6.5 Add pre-commit hooks configuration
+- [x] 6.1 Create requirements.txt with core dependencies
+- [x] 6.2 Create requirements-dev.txt with development dependencies
+- [x] 6.3 Add pyproject.toml with project metadata
+- [x] 6.4 Create setup.py or setup.cfg for packaging
+- [x] 6.5 Add pre-commit hooks configuration
 
 ## 7. Documentation and Examples
 
