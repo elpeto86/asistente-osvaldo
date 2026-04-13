@@ -80,9 +80,7 @@ class Message:
 class UserMessage(Message):
     """Message from user to assistant."""
     
-    def __post_init__(self):
-        """Ensure message type is set correctly."""
-        self.message_type = MessageType.USER
+    message_type: str = field(default=MessageType.USER, init=False)
     
     @classmethod
     def create(
@@ -93,7 +91,7 @@ class UserMessage(Message):
         **metadata
     ) -> "UserMessage":
         """Create user message with common metadata."""
-        msg = cls(content=content)
+        msg = cls(content=content, message_type=MessageType.USER)
         
         if user_id:
             msg.add_metadata("user_id", user_id)
@@ -110,6 +108,7 @@ class UserMessage(Message):
 class AssistantMessage(Message):
     """Message from assistant to user."""
     
+    message_type: str = field(default=MessageType.ASSISTANT, init=False)
     confidence: float = 1.0
     tool_calls: List[Dict[str, Any]] = field(default_factory=list)
     
@@ -130,6 +129,7 @@ class AssistantMessage(Message):
         """Create assistant message with common metadata."""
         msg = cls(
             content=content,
+            message_type=MessageType.ASSISTANT,
             confidence=confidence,
             tool_calls=tool_calls or []
         )
@@ -227,14 +227,28 @@ class SystemMessage(Message):
         )
 
 
-@dataclass
 class ToolMessage(Message):
     """Message from tool execution."""
     
-    tool_name: str
-    tool_args: Dict[str, Any]
-    execution_time_ms: float = 0.0
-    success: bool = True
+    def __init__(
+        self, 
+        content: str, 
+        tool_name: str, 
+        tool_args: Dict[str, Any],
+        execution_time_ms: float = 0.0, 
+        success: bool = True,
+        **kwargs
+    ):
+        """Initialize ToolMessage with required parameters."""
+        super().__init__(
+            content=content,
+            message_type=MessageType.TOOL,
+            **kwargs
+        )
+        self.tool_name = tool_name
+        self.tool_args = tool_args
+        self.execution_time_ms = execution_time_ms
+        self.success = success
     
     def __post_init__(self):
         """Ensure message type is set correctly."""
