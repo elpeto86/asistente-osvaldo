@@ -231,27 +231,27 @@ plugins = [
 ]
 
 nav = [
-    "Home": "index.md",
-    "Getting Started": [
-        "Installation": "installation.md",
-        "Quick Start": "quickstart.md",
-        "Configuration": "configuration.md",
-    ],
-    "User Guide": [
-        "Core Concepts": "concepts.md",
-        "Creating Assistants": "creating-assistants.md",
-        "Configuration": "configuration.md",
-        "Logging": "logging.md",
-    ],
-    "API Reference": [
-        "assistant": "api/assistant.md",
-        "core": "api/core.md",
-        "utils": "api/utils.md",
-        "interfaces": "api/interfaces.md",
-    ],
-    "Developer Guide": [
-        "Contributing": "contributing.md",
-        "Architecture": "architecture.md",
-        "Testing": "testing.md",
-    ],
+    {"Home": "index.md"},
+    {"Getting Started": [
+        {"Installation": "installation.md"},
+        {"Quick Start": "quickstart.md"},
+        {"Configuration": "configuration.md"},
+    ]},
+    {"User Guide": [
+        {"Core Concepts": "concepts.md"},
+        {"Creating Assistants": "creating-assistants.md"},
+        {"Configuration": "configuration.md"},
+        {"Logging": "logging.md"},
+    ]},
+    {"API Reference": [
+        {"assistant": "api/assistant.md"},
+        {"core": "api/core.md"},
+        {"utils": "api/utils.md"},
+        {"interfaces": "api/interfaces.md"},
+    ]},
+    {"Developer Guide": [
+        {"Contributing": "contributing.md"},
+        {"Architecture": "architecture.md"},
+        {"Testing": "testing.md"},
+    ]},
 ]
