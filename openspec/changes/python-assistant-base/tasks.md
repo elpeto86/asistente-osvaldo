@@ -32,11 +32,11 @@
 
 ## 5. Testing Framework
 
-- [ ] 5.1 Set up pytest configuration in pytest.ini
-- [ ] 5.2 Create conftest.py with common fixtures
-- [ ] 5.3 Implement mock_assistant fixture for testing
-- [ ] 5.4 Create test configuration fixture
-- [ ] 5.5 Add utilities for creating test messages and responses
+- [x] 5.1 Set up pytest configuration in pytest.ini
+- [x] 5.2 Create conftest.py with common fixtures
+- [x] 5.3 Implement mock_assistant fixture for testing
+- [x] 5.4 Create test configuration fixture
+- [x] 5.5 Add utilities for creating test messages and responses
 
 ## 6. Dependencies and Tooling
 
